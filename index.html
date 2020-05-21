@@ -1,109 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 0.8em;
-            }
-
-            body a {
-                text-decoration: none;
-            }
-
-            #top-bar {
-                top: 0;
-                margin: 0;
-                padding: 0;
-                position: relative; 
-                display: inline;         
-            }
-
-            #top-left {
-                float: left;
-            }
-
-            #top-right {
-                float: right;
-            }
-
-            #middle {
-
-            }
-
-            #logo {
-                display: block;
-                margin: auto;
-            }
-
-            #search-form {
-                display: block;
-                margin: auto;
-            }
-
-            #buttons {
-                
-            }
-
-            #footer {
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                height: 40px;
-                background-color: gray;
-            }
-
-            #footer-left {
-                float: left;
-            }
-
-            #footer-right {
-                float: right;
-            }
-
-        </style>
+        <link rel="stylesheet" href="styles/styles.css">
 
         <title>Google</title>
     </head>
     
     <body>
-        <div id="top-bar">
-            <div id="top-left">
-                <a href="#">About</a>
-                <a href="#">Store</a>
-            </div>
-            <div id="top-right">
-                <a href="#">Gmail</a>
-                <a href="#">Images</a>
-                <a href="#">APPSLOGO</a>
-                <a href="#">SIGNIN</a>
-            </div>
-        </div>
-
-        <div id="middle">
-            <img id="logo" src="images/googlelogo_color_272x92dp.png">
-
+        <nav class="top">
+            <ul>
+              <li><a class="top" href="#">About</a></li>
+              <li><a class="top" href="#">Store</a></li>
+            </ul>
+            <ul>
+              <li><a class="top" href="#">Gmail</a></li>
+              <li><a class="top" href="#">Images</a></li>
+              <li><a class="top" href="#"><img class="app-launcher" src="images/i1_1967ca6a.png" alt="Apps"></a></li>
+              <li><a class="top" id="sign-in" href="#">Sign in</a></li>
+            </ul>
+        </nav>          
             
-            <div id="search-form">
-                <input type="text">
-                <div id="buttons">
-                    <button>Search</button>
-                    <button>I'm Feeling Lucky</button>
-                </div>
+        <div id="logo-and-search-container">
+            
+            <img class="google-logo" src="images/googlelogo_color_272x92dp.png" alt="Google Logo">
+                      
+            <div id="search-and-buttons-container">
+              <div id="search-bar-container">
+                <form id="search-input-form" action="/search-results">
+                
+                  <img id="magnifying-glass" src="images/magnifying-glass-icon-31x31.png">
+                
+                  <input id="search-text-input" type="text">
+                  
+                </form>
+              </div>
+                
+              <div id="buttons-container">
+                  <input class="search-buttons" type="submit" value="Google Search">
+                  <button class="search-buttons" type="button">I'm Feeling Lucky</button>
+              </div>
             </div>
+            
         </div>
-
-        <div id="footer">
-            <div id="footer-left">
-                <a href="#">Advertising</a>
-                <a href="#">Business</a>
-                <a href="#">How Search Works</a>
-            </div>
-            <div id="footer-right">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Settings</a>
-            </div>           
-        </div>
+          
+        <nav class="bottom">
+            <ul class="bottom-left">
+              <li class="bottom-left"><a class="bottom" href="#">Advertising</a></li>
+              <li class="bottom-left"><a class="bottom" href="#">Business</a></li>
+              <li class="bottom-left"><a class="bottom" href="#">How Search Works</a></li>
+            </ul>
+            <ul class="bottom-right">
+              <li class="bottom-right"><a class="bottom" href="#">Privacy</a></li>
+              <li class="bottom-right"><a class="bottom" href="#">Terms</a></li>
+              <li class="bottom-right"><a class="bottom" href="#">Settings</a></li>
+            </ul>
+        </nav>
     </body>
 </html>
